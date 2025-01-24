@@ -9,24 +9,26 @@ const getConnectionUpdate = async (startSock, events) => {
     if (connection === "close") {
         console.log(lastDisconnect.error.output.statusCode, DisconnectReason.loggedOut);
 
-        if (lastDisconnect.error.output.statusCode == DisconnectReason.loggedOut) {
-            try {
-                let path = "./baileys_auth_info/";
-                let filenames = await readdir(path);
-                filenames.forEach((file) => {
-                    fs.unlinkSync(path + file);
-                });
-            } catch { }
-            stopInterval();
-            // reconnect if not logged out
-            startSock("logout");
-        } else if (lastDisconnect.error.output.statusCode == 515) {
-            startSock("reconnecting");
-        } else if (lastDisconnect.error.output.statusCode == 403) {
-            startSock("error");
-        } else {
-            startSock();
-        }
+        const statusCode = lastDisconnect.error.output.statusCode;
+        const disconnectionActions = {
+            [DisconnectReason.loggedOut]: async () => {
+                try {
+                    let path = "./baileys_auth_info/";
+                    let filenames = await readdir(path);
+                    filenames.forEach((file) => {
+                        fs.unlinkSync(path + file);
+                    });
+                } catch { }
+                stopInterval();
+                startSock("logout");
+            },
+            515: () => startSock("reconnecting"),
+            403: () => startSock("error"),
+            default: () => startSock()
+        };
+
+        const action = disconnectionActions[statusCode] || disconnectionActions.default;
+        await action();
     }
     console.log("connection update", update);
 }
