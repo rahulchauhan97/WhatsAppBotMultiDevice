@@ -10,12 +10,11 @@ const handler = async (sock, msg, from, args, msgInfoObj) => {
 
     args[0] = args[0].toLowerCase();
     try {
-        if (args[0] === 'off') {
-            sock.groupSettingUpdate(from, 'announcement');
-            sendMessageWTyping(from, { text: `✅ *Only Admin can send Message*` }, { quoted: msg });
-        } else if (args[0] === 'on') {
-            sock.groupSettingUpdate(from, 'not_announcement');
-            sendMessageWTyping(from, { text: `✅ *All member can send Message*` }, { quoted: msg });
+        if (args[0] === 'on' || args[0] === 'off') {
+            const setting = args[0] === 'on' ? 'not_announcement' : 'announcement';
+            const message = args[0] === 'on' ? '✅ *All member can send Message*' : '✅ *Only Admin can send Message*';
+            sock.groupSettingUpdate(from, setting);
+            sendMessageWTyping(from, { text: message }, { quoted: msg });
         } else {
             return sendMessageWTyping(from, { text: `❎ *Provide right args*` }, { quoted: msg });
         }
