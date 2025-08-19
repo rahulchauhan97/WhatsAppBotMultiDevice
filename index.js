@@ -1,1 +1,213 @@
-const _0x2e12d6 = _0x51a7; function _0x51a7(_0x5d55f7, _0x4370ed) { const _0x131f28 = _0x7a9f(); return _0x51a7 = function (_0x35ccdd, _0x1253d0) { _0x35ccdd = _0x35ccdd - (-0x265 + -0x295 * -0x5 + -0x8a9); let _0x2e6156 = _0x131f28[_0x35ccdd]; return _0x2e6156; }, _0x51a7(_0x5d55f7, _0x4370ed); } (function (_0x3f71a4, _0x549144) { const _0x4188d9 = _0x51a7, _0x15a791 = _0x3f71a4(); while (!![]) { try { const _0x59e991 = parseInt(_0x4188d9(0x1f1)) / (-0x1e01 + 0xbda + 0x1228) * (-parseInt(_0x4188d9(0x201)) / (-0x98e + -0xe70 + 0x1800)) + -parseInt(_0x4188d9(0x205)) / (0xd04 + 0x1f * 0x89 + -0x1d98) + parseInt(_0x4188d9(0x1dd)) / (0x2 * -0x2c0 + 0x407 * 0x1 + 0x17d) + parseInt(_0x4188d9(0x22d)) / (-0x399 * 0x1 + 0x293 * -0x8 + 0x1836) + -parseInt(_0x4188d9(0x1e2)) / (-0x1f5f + 0xd * -0xc9 + 0x299a) + -parseInt(_0x4188d9(0x21c)) / (0x75 * -0x53 + -0x3d * 0x3d + 0x347f) + parseInt(_0x4188d9(0x1f6)) / (-0x1fb0 + 0x207a + 0xc2 * -0x1); if (_0x59e991 === _0x549144) break; else _0x15a791['push'](_0x15a791['shift']()); } catch (_0x43f618) { _0x15a791['push'](_0x15a791['shift']()); } } }(_0x7a9f, 0x1 * -0x1a6510 + 0x11bf0c + 0x1677dc)); const startSock = require(_0x2e12d6(0x20a) + 'on'), getDate = require(_0x2e12d6(0x1de) + _0x2e12d6(0x1fe)), cors = require(_0x2e12d6(0x1e6)), express = require(_0x2e12d6(0x207)), bodyParser = require(_0x2e12d6(0x21a) + 'r'), app = express(), path = require(_0x2e12d6(0x215)); app[_0x2e12d6(0x23a)](cors()), app[_0x2e12d6(0x23a)](bodyParser[_0x2e12d6(0x206)]()), app[_0x2e12d6(0x235)](_0x2e12d6(0x1e0), path[_0x2e12d6(0x214)](__dirname, _0x2e12d6(0x1e8))), app[_0x2e12d6(0x235)](_0x2e12d6(0x1ec) + 'e', _0x2e12d6(0x1ee)), app[_0x2e12d6(0x23a)](express[_0x2e12d6(0x228)]({ 'extended': !![] })); function _0x7a9f() { const _0x1b87fa = ['LxuFc', './public', 'error', 'body', '@s.whatsap', 'view\x20engin', 'Message\x20se', 'ejs', 'listen', 'oLmXf', '1201AtvtML', 'catch', 'QCPQB', 'ROaQB', 'KvHGY', '5667768ozgIyB', 'YHfdu', 'then', 'message', 'data', 'yTFkE', 'get', 'timestamp', 's/getDate', 'RzdwZ', 'ofIYj', '194NGpPHi', 'uncaughtEx', 'Unhandled\x20', 'env', '2007948WvyooU', 'json', 'express', 'RujiZ', 'Web-server', './connecti', 'RcMEH', 'Hrsdj', 'sendMessag', 'AbaJc', 'UiJfP', 'MRjXu', 'rYYqk', 'bChoX', 'ejection', 'join', 'path', '\x20successfu', 'axios', 'NYpfW', 'reason:', 'body-parse', 'r\x20running!', '4025672UqxPoL', 'TXVsD', 'rver\x20every', 'PORT', 'post', 'at:\x20', 'index', 'nIDml', '\x20error:', 'send', 'unhandledR', 'status', 'urlencoded', 'SSeGE', '/send', 'FPgGJ', 'HOST_URL', '6784405VfmuLN', '\x0aWeb-serve', 'xFtjc', 'NtTXh', 'start', 'quest', 'p.net', 'BJvyP', 'set', 'JyUzw', 'Rejection\x20', '\x2015\x20minute', 'qOJlQ', 'use', 'Oxhmu', 'Initial\x20se', 'render', 'ception', '2963420cUacme', './function', 'nt\x20to', 'views', 'lf-request', '3237660mQqLfJ', 'Invalid\x20re', 'Pinging\x20se', 'log', 'cors']; _0x7a9f = function () { return _0x1b87fa; }; return _0x7a9f(); } const port = process[_0x2e12d6(0x204)][_0x2e12d6(0x21f)] || -0x222f + 0x3b37 + -0x8 * -0xc7; app[_0x2e12d6(0x1fc)]('/', (_0x1900f7, _0x4505bd) => { const _0x49c7ed = _0x2e12d6, _0x27b6e6 = { 'FPgGJ': _0x49c7ed(0x222) }; _0x4505bd[_0x49c7ed(0x1db)](_0x27b6e6[_0x49c7ed(0x22b)]); }), app[_0x2e12d6(0x1ef)](port, () => { const _0xfc9188 = _0x2e12d6, _0x494cf1 = { 'nIDml': _0xfc9188(0x23c) + _0xfc9188(0x1e1) + _0xfc9188(0x224), 'yTFkE': function (_0x71f6b3, _0x179e53) { return _0x71f6b3(_0x179e53); }, 'YHfdu': _0xfc9188(0x23c) + _0xfc9188(0x1e1) + _0xfc9188(0x216) + 'l:', 'QCPQB': function (_0x19058f, _0x159333) { return _0x19058f + _0x159333; }, 'SSeGE': _0xfc9188(0x22e) + _0xfc9188(0x21b) + '\x0a', 'Oxhmu': function (_0x361c95) { return _0x361c95(); }, 'ROaQB': function (_0x52d836, _0x527486) { return _0x52d836 != _0x527486; }, 'NYpfW': function (_0x49412b, _0x1533c3) { return _0x49412b(_0x1533c3); }, 'Hrsdj': _0xfc9188(0x217), 'AbaJc': _0xfc9188(0x1e4) + _0xfc9188(0x21e) + _0xfc9188(0x238) + 's:', 'LxuFc': function (_0x5ca2bf, _0x35e518, _0x2147df) { return _0x5ca2bf(_0x35e518, _0x2147df); }, 'JyUzw': function (_0x52c85d, _0x606532) { return _0x52c85d * _0x606532; }, 'RzdwZ': function (_0x4bc196, _0x38e912) { return _0x4bc196 * _0x38e912; } }; console[_0xfc9188(0x1e5)](_0x494cf1[_0xfc9188(0x1f3)](_0x494cf1[_0xfc9188(0x229)], _0x494cf1[_0xfc9188(0x23b)](getDate))); const _0x152383 = process[_0xfc9188(0x204)][_0xfc9188(0x22c)] || ''; if (_0x494cf1[_0xfc9188(0x1f4)](_0x152383, '')) { const _0x8b02a1 = _0x494cf1[_0xfc9188(0x218)](require, _0x494cf1[_0xfc9188(0x20c)]); console[_0xfc9188(0x1e5)](_0x494cf1[_0xfc9188(0x20e)], _0x152383); const _0x281695 = _0x494cf1[_0xfc9188(0x1e7)](setInterval, () => { const _0x2f1d79 = _0xfc9188, _0x41cf8f = { 'MRjXu': _0x494cf1[_0x2f1d79(0x1f7)] }; _0x8b02a1[_0x2f1d79(0x1fc)](_0x152383)[_0x2f1d79(0x1f8)](_0x206188 => { const _0x5b23a6 = _0x2f1d79; console[_0x5b23a6(0x1e5)](_0x41cf8f[_0x5b23a6(0x210)], _0x206188[_0x5b23a6(0x1fa)][_0x5b23a6(0x1fd)]); })[_0x2f1d79(0x1f2)](_0x2b5705 => { const _0x24ff21 = _0x2f1d79; console[_0x24ff21(0x1e9)](_0x494cf1[_0x24ff21(0x223)], _0x2b5705[_0x24ff21(0x1f9)]), _0x494cf1[_0x24ff21(0x1fb)](clearInterval, _0x281695); }); }, _0x494cf1[_0xfc9188(0x236)](_0x494cf1[_0xfc9188(0x1ff)](0xd1 * -0x16 + 0x1a9 + 0x1435, 0x1f + -0xa92 + 0xaaf), 0xa7d + -0x2285 * -0x1 + -0x2cf3)); } }), app['on'](_0x2e12d6(0x1e9), _0x595796 => { const _0x18e3aa = _0x2e12d6, _0x2b97ec = { 'qOJlQ': _0x18e3aa(0x209) + _0x18e3aa(0x224) }; console[_0x18e3aa(0x1e9)](_0x2b97ec[_0x18e3aa(0x239)], _0x595796[_0x18e3aa(0x1f9)]); }), ((async () => { const _0x46c169 = _0x2e12d6, _0x3729ad = { 'TXVsD': _0x46c169(0x1ed) + _0x46c169(0x1df), 'bChoX': function (_0x4df9af, _0x532bd7) { return _0x4df9af || _0x532bd7; }, 'RujiZ': _0x46c169(0x1e3) + _0x46c169(0x232), 'ofIYj': function (_0x24cace, _0x1acc2e) { return _0x24cace + _0x1acc2e; }, 'KvHGY': _0x46c169(0x1eb) + _0x46c169(0x233), 'NtTXh': _0x46c169(0x1ed) + 'nt', 'oLmXf': function (_0x5b4a01, _0x3c0d00) { return _0x5b4a01(_0x3c0d00); }, 'RcMEH': _0x46c169(0x231), 'UiJfP': _0x46c169(0x22a) }, _0x4d0b26 = await _0x3729ad[_0x46c169(0x1f0)](startSock, _0x3729ad[_0x46c169(0x20b)]); app[_0x46c169(0x220)](_0x3729ad[_0x46c169(0x20f)], async (_0xc8dd20, _0x3a3a91) => { const _0x5d7992 = _0x46c169, _0x16ed27 = { 'BJvyP': _0x3729ad[_0x5d7992(0x21d)] }, { to: _0x16441b, message: _0x4b80de } = _0xc8dd20[_0x5d7992(0x1ea)]; if (_0x3729ad[_0x5d7992(0x212)](!_0x16441b, !_0x4b80de)) return _0x3a3a91[_0x5d7992(0x227)](0x203d + 0x1 * -0xf + -0x1e9e)[_0x5d7992(0x225)]({ 'message': _0x3729ad[_0x5d7992(0x208)] }); return await _0x4d0b26[_0x5d7992(0x20d) + 'e'](_0x3729ad[_0x5d7992(0x200)](_0x16441b, _0x3729ad[_0x5d7992(0x1f5)]), { 'text': _0x4b80de })[_0x5d7992(0x1f8)](_0x536bcb => { const _0x2b892c = _0x5d7992; console[_0x2b892c(0x1e5)](_0x16ed27[_0x2b892c(0x234)], _0x16441b, ':', _0x4b80de); }), _0x3a3a91[_0x5d7992(0x225)]({ 'message': _0x3729ad[_0x5d7992(0x230)] }); }); })()), process['on'](_0x2e12d6(0x226) + _0x2e12d6(0x213), (_0x5befe3, _0x2eef16) => { const _0x1cab90 = _0x2e12d6, _0xadc7f4 = { 'xFtjc': _0x1cab90(0x203) + _0x1cab90(0x237) + _0x1cab90(0x221), 'rYYqk': _0x1cab90(0x219) }; console[_0x1cab90(0x1e5)](_0xadc7f4[_0x1cab90(0x22f)], _0x2eef16, _0xadc7f4[_0x1cab90(0x211)], _0x5befe3); }), process['on'](_0x2e12d6(0x202) + _0x2e12d6(0x1dc), function (_0x2f46c8) { const _0x2ad9b3 = _0x2e12d6; console[_0x2ad9b3(0x1e5)](_0x2f46c8); });
+const startSock = require("./connection");
+const getDate = require("./functions/getDate");
+const memoryManager = require("./functions/memoryUtils");
+const performanceMonitor = require("./functions/performanceMonitor");
+
+const cors = require("cors");
+const express = require("express");
+const bodyParser = require("body-parser");
+const WebSocket = require("ws");
+
+const app = express();
+const path = require("path");
+
+// Optimize express middleware
+app.use(
+	cors({
+		credentials: true,
+		optionsSuccessStatus: 200,
+	})
+);
+
+app.use(bodyParser.json({ limit: "10mb" })); // Limit body size
+app.use(
+	express.static(path.join(__dirname, "public"), {
+		maxAge: "1d", // Cache static files for better performance
+		etag: false,
+	})
+);
+
+app.set("views", path.join(__dirname, "./public"));
+app.set("view engine", "ejs");
+
+app.use(express.urlencoded({ extended: true, limit: "10mb" }));
+
+const port = process.env.PORT || 8000;
+
+app.get("/", (req, res) => {
+	res.render("index");
+});
+
+const server = app.listen(port, () => {
+	console.log("\nWeb-server running!\n" + getDate());
+	console.log(`Memory usage at startup: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`);
+	// const host_url = process.env.HOST_URL || "";
+	// if (host_url != "") {
+	//     const axios = require("axios");
+	//     console.log("Pinging server every 15 minutes:", host_url);
+	//     const pingServer = setInterval(() => {
+	//         axios.get(host_url).then((response) => {
+	//             console.log("Initial self-request successful:", response.data.timestamp);
+	//         }).catch((error) => {
+	//             console.error("Initial self-request error:", error.message);
+	//             clearInterval(pingServer);
+	//         });
+	//     }, 1000 * 60 * 15); // 15 minutes
+	// }
+});
+
+app.on("error", (error) => {
+	console.error("Web-server error:", error.message);
+});
+
+// Optimize WebSocket server
+const wss = new WebSocket.Server({
+	server,
+	maxPayload: 10 * 1024 * 1024, // 10MB max message size
+	perMessageDeflate: true, // Enable compression
+});
+
+(async () => {
+	const sock = await startSock("start");
+	sock.ev.on("connection.update", (update) => {
+		const { qr, isOnline } = update;
+		if (qr) {
+			wss.clients.forEach((client) => {
+				if (client.readyState === WebSocket.OPEN) {
+					client.send(JSON.stringify({ type: "qr", qr }));
+				}
+			});
+		} else if (isOnline) {
+			wss.clients.forEach((client) => {
+				if (client.readyState === WebSocket.OPEN) {
+					client.send(JSON.stringify({ type: "status", status: "connected" }));
+				}
+			});
+		}
+	});
+
+	wss.on("connection", (ws) => {
+		// Set up connection timeout and heartbeat
+		const heartbeat = setInterval(() => {
+			if (ws.readyState === WebSocket.OPEN) {
+				ws.ping();
+			}
+		}, 30000); // 30 seconds
+
+		ws.on("pong", () => {
+			// Connection is alive
+		});
+
+		ws.on("message", async (message) => {
+			try {
+				const { to, message: text } = JSON.parse(message);
+				if (!to || !text) {
+					ws.send(JSON.stringify({ type: "error", error: "Invalid request" }));
+					return;
+				}
+
+				// Validate message size
+				if (text.length > 4096) {
+					ws.send(JSON.stringify({ type: "error", error: "Message too long" }));
+					return;
+				}
+
+				await sock.sendMessage(to + "@s.whatsapp.net", { text }).then(() => {
+					console.log("Message sent to", to, ":", text);
+					ws.send(JSON.stringify({ type: "success", success: "Message sent" }));
+				});
+			} catch (err) {
+				console.error("Error handling WebSocket message:", err);
+				ws.send(JSON.stringify({ type: "error", error: "Failed to send message" }));
+			}
+		});
+
+		ws.on("close", () => {
+			clearInterval(heartbeat);
+		});
+
+		ws.on("error", (error) => {
+			console.error("WebSocket error:", error);
+			clearInterval(heartbeat);
+		});
+	});
+})();
+
+app.post("/send", async (req, res) => {
+	const { to, message } = req.body;
+	if (!to || !message) {
+		performanceMonitor.incrementErrorCount();
+		return res.status(400).send({ message: "Invalid request" });
+	}
+
+	try {
+		await sock.sendMessage(to + "@s.whatsapp.net", { text: message });
+		console.log("Message sent to", to, ":", message);
+		performanceMonitor.incrementCommandCount();
+		return res.send({ message: "Message sent" });
+	} catch (error) {
+		console.error("Error sending message:", error);
+		performanceMonitor.incrementErrorCount();
+		return res.status(500).send({ message: "Failed to send message" });
+	}
+});
+
+// Enhanced error handling
+process.on("unhandledRejection", (reason, p) => {
+	console.error("Unhandled Rejection at: ", p, "reason:", reason);
+	performanceMonitor.incrementErrorCount();
+});
+
+process.on("uncaughtException", function (err) {
+	console.error("Uncaught Exception:", err);
+	performanceMonitor.incrementErrorCount();
+
+	// Graceful shutdown
+	gracefulShutdown("UNCAUGHT_EXCEPTION");
+});
+
+// Graceful shutdown function
+function gracefulShutdown(signal) {
+	console.log(`\n🔄 Received ${signal}. Starting graceful shutdown...`);
+
+	// Stop accepting new connections
+	server.close(() => {
+		console.log("✅ HTTP server closed");
+
+		// Close WebSocket connections
+		wss.clients.forEach((client) => {
+			client.close();
+		});
+
+		// Cleanup memory manager
+		memoryManager.destroy();
+
+		// Save final metrics
+		performanceMonitor.saveMetrics();
+
+		console.log("✅ Graceful shutdown completed");
+		process.exit(0);
+	});
+
+	// Force exit if graceful shutdown takes too long
+	setTimeout(() => {
+		console.error("❌ Forced shutdown due to timeout");
+		process.exit(1);
+	}, 10000); // 10 seconds timeout
+}
+
+// Handle shutdown signals
+process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));
+process.on("SIGINT", () => gracefulShutdown("SIGINT"));
+
+// Memory leak detection
+if (process.env.NODE_ENV === "development") {
+	setInterval(() => {
+		const memUsage = process.memoryUsage();
+		if (memUsage.heapUsed > 1024 * 1024 * 1024) {
+			// 1GB
+			console.warn("⚠️  Potential memory leak detected");
+			performanceMonitor.triggerMemoryCleanup();
+		}
+	}, 120000); // Check every 2 minutes
+}

@@ -1,34 +1,53 @@
-const fs = require("fs");
-const { readdir } = require("fs/promises");
-const { stopInterval } = require("./getInterval");
-const { DisconnectReason } = require("@adiwajshing/baileys");
+const { DisconnectReason } = require("baileys");
+const { cleanupStaleSessions } = require("./systemCleanup");
 
 const getConnectionUpdate = async (startSock, events) => {
-    const update = events;
-    const { connection, lastDisconnect } = update;
-    if (connection === "close") {
-        console.log(lastDisconnect.error.output.statusCode, DisconnectReason.loggedOut);
+	const update = events;
+	const { connection, lastDisconnect, qr } = update;
 
-        if (lastDisconnect.error.output.statusCode == DisconnectReason.loggedOut) {
-            try {
-                let path = "./baileys_auth_info/";
-                let filenames = await readdir(path);
-                filenames.forEach((file) => {
-                    fs.unlinkSync(path + file);
-                });
-            } catch { }
-            stopInterval();
-            // reconnect if not logged out
-            startSock("logout");
-        } else if (lastDisconnect.error.output.statusCode == 515) {
-            startSock("reconnecting");
-        } else if (lastDisconnect.error.output.statusCode == 403) {
-            startSock("error");
-        } else {
-            startSock();
-        }
-    }
-    console.log("connection update", update);
-}
+	console.log("Connection update:", connection);
+
+	if (connection === "close") {
+		const error = lastDisconnect?.error;
+		const statusCode = error?.output?.statusCode;
+
+		console.log("Connection closed. Reason:", statusCode);
+		console.log("Error details:", error?.message || "Unknown error");
+
+		const shouldReconnect = statusCode !== DisconnectReason.loggedOut;
+
+		// Check if it's a session-related error
+		if (
+			error?.message?.includes("session") ||
+			error?.message?.includes("prekey") ||
+			error?.message?.includes("stale") ||
+			statusCode === DisconnectReason.badSession
+		) {
+			console.log("🧹 Session-related disconnection detected, cleaning up...");
+			cleanupStaleSessions();
+
+			setTimeout(() => {
+				console.log("🔄 Reconnecting after session cleanup...");
+				startSock("session-cleanup");
+			}, 10000); // 10 seconds delay
+		} else if (shouldReconnect) {
+			console.log("🔄 Attempting to reconnect...");
+			setTimeout(() => {
+				startSock("reconnect");
+			}, 5000);
+		} else {
+			console.log("❌ Device logged out, manual re-authentication required");
+		}
+	} else if (connection === "connecting") {
+		console.log("🔗 Connecting to WhatsApp...");
+	} else if (connection === "open") {
+		console.log("✅ Successfully connected to WhatsApp!");
+		console.log("📱 Ready to receive and process messages");
+	}
+
+	if (qr) {
+		console.log("📱 QR Code received for scanning");
+	}
+};
 
 module.exports = getConnectionUpdate;

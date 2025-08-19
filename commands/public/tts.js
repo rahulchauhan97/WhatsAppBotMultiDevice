@@ -1,62 +1,51 @@
-const fs = require('fs');
-const { UltimateTextToImage } = require('ultimate-text-to-image');
+const { createCanvas, loadImage } = require("canvas");
 const { Sticker } = require("wa-sticker-formatter");
+const fs = require("fs");
 
-const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}` };
+const getRandom = (ext) => `${Math.floor(Math.random() * 10000)}${ext}`;
 
 const handler = async (sock, msg, from, args, msgInfoObj) => {
-    const { sendMessageWTyping, evv } = msgInfoObj;
+	const { sendMessageWTyping, evv } = msgInfoObj;
 
-    if (!args[0] && !msg.message.extendedTextMessage) return sendMessageWTyping(from, { text: `❌ *Enter some text*` }, { quoted: msg });
+	if (!args[0] && !msg.message.extendedTextMessage) {
+		return sendMessageWTyping(from, { text: `❌ *Enter some text*` }, { quoted: msg });
+	}
 
-    let message = evv || msg.message.extendedTextMessage.contextInfo.quotedMessage.conversation;
-    message = message.split(":").join("\n")
-    const textToImage = new UltimateTextToImage(`${message}`, {
-        width: 512,
-        maxWidth: 1000,
-        maxHeight: 1000,
-        fontFamily: "Arial",
-        fontColor: "#ff0000",
-        fontSize: 80,
-        minFontSize: 50,
-        lineHeight: 90,
-        autoWrapLineHeightMultiplier: 1.2,
-        margin: 1,
-        marginBottom: 1,
-        align: "center",
-        valign: "middle",
-        // backgroundColor: "#000000",
-        // borderColor: 0xFF000099,
-        // borderSize: 2,
-        // underlineColor: "#00FFFF33",
-        // underlineSize: 2,
-    }).render();
+	let message = evv || msg.message.extendedTextMessage.contextInfo.quotedMessage.conversation;
+	message = message.split(":").join("\n");
 
-    const streamPng = textToImage.toStream();
-    const filename = getRandom(".png");
+	const canvas = createCanvas(512, 512);
+	const ctx = canvas.getContext("2d");
 
-    fileSaved(streamPng, filename).then(async () => {
-        const sticker = new Sticker(`./${filename}`, {
-            pack: "Bot",
-            author: "eva",
-        });
-        await sticker.build();
-        const stickerBuffer = await sticker.get();
-        await sock.sendMessage(from, { sticker: Buffer.from(stickerBuffer) }, { quoted: msg });
-        fs.unlinkSync(filename);
-    });
-}
+	ctx.fillStyle = "#ffffff"; // Background color
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-async function fileSaved(streamPng, filename) {
-    const out = fs.createWriteStream(`./${filename}`);
-    streamPng.pipe(out);
-    return new Promise((resolve, reject) => out.on("finish", resolve).on("error", reject));
-}
+	ctx.font = "80px Arial";
+	ctx.fillStyle = "#ff0000"; // Font color
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
+	ctx.fillText(message, canvas.width / 2, canvas.height / 2);
 
+	const filename = getRandom(".png");
+	const out = fs.createWriteStream(`./${filename}`);
+	const stream = canvas.createPNGStream();
+	stream.pipe(out);
+
+	out.on("finish", async () => {
+		const sticker = new Sticker(`./${filename}`, {
+			pack: "Bot",
+			author: "eva",
+		});
+		await sticker.build();
+		const stickerBuffer = await sticker.get();
+		await sock.sendMessage(from, { sticker: Buffer.from(stickerBuffer) }, { quoted: msg });
+		fs.unlinkSync(filename); // Clean up after sending
+	});
+};
 
 module.exports.command = () => ({
-    cmd: ["tts", "attp"],
-    desc: "Convert text to sticker",
-    usage: "tts <text>",
-    handler
+	cmd: ["tts", "attp"],
+	desc: "Convert text to sticker",
+	usage: "tts <text>",
+	handler,
 });
